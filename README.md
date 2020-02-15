@@ -23,6 +23,7 @@ $ open ImageScanner.xcodeproj/
 
 ## Technologies - Frameworks - Architecture:
 * Swift 5
+* HSB Color Picker
 * UIKit
 * CoreGraphics
 * MVC
@@ -30,7 +31,7 @@ $ open ImageScanner.xcodeproj/
 ## Launch Screen:
 
 ## Walkthrough:
-
+<img width="300" alt="Home Screen" src="https://user-images.githubusercontent.com/43827399/74577986-4a8d3400-4f4f-11ea-8b7c-c64f343b0eaa.png">
 
 ## Features:
 
