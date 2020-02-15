@@ -31,7 +31,8 @@ $ open ImageScanner.xcodeproj/
 ## Launch Screen:
 
 ## Walkthrough:
-<img width="300" alt="Home Screen" src="https://user-images.githubusercontent.com/43827399/74577986-4a8d3400-4f4f-11ea-8b7c-c64f343b0eaa.png">
+* Slide to choose your prefered brush stroke thickness and add layers of color to let your creativity flow
+![painting](https://user-images.githubusercontent.com/43827399/74578627-24699300-4f53-11ea-81f4-0ba266f1cf5c.gif)
 
 ## Features:
 
