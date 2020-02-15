@@ -31,7 +31,10 @@ $ open ImageScanner.xcodeproj/
 ## Launch Screen:
 
 ## Walkthrough:
-* Slide to choose your prefered brush stroke thickness and add layers of color to let your creativity flow
+* Slide to choose your prefered brush stroke thickness
+* Pick a color from the color range. Color selection can be seen from color sphere bottom right of the canvas
+* add layers of color to let your creativity flow
+
 ![painting](https://user-images.githubusercontent.com/43827399/74578627-24699300-4f53-11ea-81f4-0ba266f1cf5c.gif)
 
 ## Features:
