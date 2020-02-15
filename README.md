@@ -52,6 +52,8 @@ $ open ImageScanner.xcodeproj/
 
 ## Future Implementations:
 
-### Design
+### Design:
+* Improve UX by re-arrange buttons and adding others functionalities.
+* Save image feature as multiple file selection.
+* Image import functionalities
 
-### Code optimization
