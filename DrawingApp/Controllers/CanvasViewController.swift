@@ -58,13 +58,6 @@ class CanvasViewController: UIViewController {
         popMenu()
     }
     
-    @IBAction func tap(_ sender: UITapGestureRecognizer) {
-        if slideMenu {
-           popMenu()
-        }
-    }
-    
-    
     fileprivate func popMenu() {
         slideMenu.toggle()
         if slideMenu {

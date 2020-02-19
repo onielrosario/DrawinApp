@@ -56,37 +56,31 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW6-kT-dzb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLR-b5-qBN">
-                                                <rect key="frame" x="334" y="467.5" width="60" height="60"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="FSl-UA-ROp"/>
-                                                    <constraint firstAttribute="height" constant="60" id="kXS-gC-mwP"/>
-                                                </constraints>
-                                            </button>
-                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="tLR-b5-qBN" secondAttribute="trailing" constant="20" id="XWH-DS-xZJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="tLR-b5-qBN" secondAttribute="bottom" constant="10" id="fSh-Ch-FwG"/>
                                             <constraint firstAttribute="height" constant="537.5" id="nTh-1b-kCf"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-NC-BgG" customClass="HSBColorPicker" customModule="DrawingApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="557.5" width="414" height="298.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.5" maxValue="10" minimumValueImage="pencil" catalog="system" maximumValueImage="pencil.tip" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-zJ-qZW">
-                                        <rect key="frame" x="17.5" y="527.5" width="379" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.5" maxValue="10" minimumValueImage="pencil" catalog="system" maximumValueImage="pencil.tip" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-zJ-qZW">
+                                        <rect key="frame" x="18" y="537.5" width="378" height="31"/>
                                         <color key="tintColor" red="0.20638802789999999" green="0.21692750490000001" blue="0.2360207805" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="setStrokeWidth:" destination="BYZ-38-t0r" eventType="valueChanged" id="M4T-e7-063"/>
                                         </connections>
                                     </slider>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-NC-BgG" customClass="HSBColorPicker" customModule="DrawingApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="567.5" width="414" height="289.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLR-b5-qBN">
+                                        <rect key="frame" x="346" y="467.5" width="60" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1mc-3P-HuI"/>
+                                            <constraint firstAttribute="width" constant="60" id="RU8-wi-jJp"/>
+                                        </constraints>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0b-oc-kdg">
                                         <rect key="frame" x="360" y="50" width="46" height="46"/>
                                         <constraints>
@@ -115,12 +109,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jW6-kT-dzb" secondAttribute="trailing" id="2JJ-eL-Kbm"/>
+                                    <constraint firstItem="eBe-NC-BgG" firstAttribute="top" secondItem="dnZ-zJ-qZW" secondAttribute="bottom" id="9rA-Xi-gRl"/>
                                     <constraint firstItem="2xC-Zt-ccp" firstAttribute="trailing" secondItem="jW6-kT-dzb" secondAttribute="trailing" constant="-8" id="GtS-Hh-utF"/>
                                     <constraint firstItem="2xC-Zt-ccp" firstAttribute="top" secondItem="c0b-oc-kdg" secondAttribute="bottom" constant="10" id="Iqi-c4-cJP"/>
+                                    <constraint firstItem="eBe-NC-BgG" firstAttribute="leading" secondItem="EVH-wn-EZV" secondAttribute="leading" id="PGN-2i-8LL"/>
+                                    <constraint firstItem="tLR-b5-qBN" firstAttribute="trailing" secondItem="jW6-kT-dzb" secondAttribute="trailing" constant="-8" id="PO2-zU-zOQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eBe-NC-BgG" secondAttribute="trailing" id="QeP-wP-gYD"/>
                                     <constraint firstItem="c0b-oc-kdg" firstAttribute="top" secondItem="jW6-kT-dzb" secondAttribute="top" constant="50" id="Z89-TY-n5k"/>
+                                    <constraint firstItem="dnZ-zJ-qZW" firstAttribute="leading" secondItem="EVH-wn-EZV" secondAttribute="leading" constant="20" id="bNv-TL-Mel"/>
                                     <constraint firstItem="jW6-kT-dzb" firstAttribute="top" secondItem="EVH-wn-EZV" secondAttribute="top" id="bsh-tm-XYE"/>
                                     <constraint firstItem="c0b-oc-kdg" firstAttribute="trailing" secondItem="jW6-kT-dzb" secondAttribute="trailing" constant="-8" id="fYH-6m-V2a"/>
+                                    <constraint firstAttribute="trailing" secondItem="dnZ-zJ-qZW" secondAttribute="trailing" constant="20" id="gNc-9n-GQC"/>
+                                    <constraint firstItem="dnZ-zJ-qZW" firstAttribute="top" secondItem="jW6-kT-dzb" secondAttribute="bottom" id="haO-39-Lxp"/>
                                     <constraint firstItem="jW6-kT-dzb" firstAttribute="leading" secondItem="EVH-wn-EZV" secondAttribute="leading" id="hab-wo-5Sm"/>
+                                    <constraint firstAttribute="bottom" secondItem="eBe-NC-BgG" secondAttribute="bottom" constant="39" id="mgZ-Dk-Kyi"/>
+                                    <constraint firstItem="tLR-b5-qBN" firstAttribute="bottom" secondItem="jW6-kT-dzb" secondAttribute="bottom" constant="-10" id="wzl-bL-tkd"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKj-oA-fnw">
@@ -147,9 +150,6 @@
                             <constraint firstItem="mKj-oA-fnw" firstAttribute="leading" secondItem="EVH-wn-EZV" secondAttribute="leading" constant="8" id="o7s-Ps-ChP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="mPv-7T-4HB" appends="YES" id="yc4-vb-jjm"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="canvasLeadingC" destination="a9O-O5-deM" id="XSX-yL-SEJ"/>
@@ -161,11 +161,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mPv-7T-4HB">
-                    <connections>
-                        <action selector="tap:" destination="BYZ-38-t0r" id="lO2-4D-DW1"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
