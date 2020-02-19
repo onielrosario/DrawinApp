@@ -14,7 +14,6 @@ class Drawing: UIView {
         image.contentMode = .scaleAspectFill
         return image
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

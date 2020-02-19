@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CanvasViewController: UIViewController {
     @IBOutlet weak var canvasView: UIView!
     @IBOutlet weak var colorPickerView: HSBColorPicker!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var strokeWidthSlider: UISlider!
+    @IBOutlet weak var canvasTrailingC: NSLayoutConstraint!
+    @IBOutlet weak var canvasLeadingC: NSLayoutConstraint!
+    private var slideMenu = false
     
     lazy var canvas = Canvas()
     
@@ -42,13 +45,45 @@ class ViewController: UIViewController {
         canvas.setStrokeWidth(value: CGFloat(sender.value))
     }
     
+    @IBAction func slideMenu(_ sender: UIButton) {
+        popMenu()
+    }
+    
+    
+    @IBAction func saveAss(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func close(_ sender: UIButton) {
+        popMenu()
+    }
+    
+    @IBAction func tap(_ sender: UITapGestureRecognizer) {
+        if slideMenu {
+           popMenu()
+        }
+    }
+    
+    
+    fileprivate func popMenu() {
+        slideMenu.toggle()
+        if slideMenu {
+            canvasLeadingC.constant += 150
+            canvasTrailingC.constant += 150
+        } else {
+            canvasLeadingC.constant = 0
+            canvasTrailingC.constant = 0
+        }
+    }
+    
+    
 }
 
 
 
-extension ViewController: HSBColorPickerDelegate {
+extension CanvasViewController: HSBColorPickerDelegate {
     func HSBColorColorPickerTouched(sender: HSBColorPicker, color: UIColor, point: CGPoint, state: UIGestureRecognizer.State) {
-         colorButton.backgroundColor = color
+        colorButton.backgroundColor = color
         canvas.strokeColor = color
     }
 }

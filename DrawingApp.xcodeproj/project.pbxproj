@@ -10,7 +10,7 @@
 		092E892723F746A3002AAEFB /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E892623F746A3002AAEFB /* Line.swift */; };
 		096A80D52391BB4B0052DFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80D42391BB4B0052DFED /* AppDelegate.swift */; };
 		096A80D72391BB4B0052DFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80D62391BB4B0052DFED /* SceneDelegate.swift */; };
-		096A80D92391BB4B0052DFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80D82391BB4B0052DFED /* ViewController.swift */; };
+		096A80D92391BB4B0052DFED /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80D82391BB4B0052DFED /* CanvasViewController.swift */; };
 		096A80DC2391BB4B0052DFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A80DA2391BB4B0052DFED /* Main.storyboard */; };
 		096A80DE2391BB4D0052DFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096A80DD2391BB4D0052DFED /* Assets.xcassets */; };
 		096A80E12391BB4D0052DFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A80DF2391BB4D0052DFED /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		096A80D12391BB4B0052DFED /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A80D42391BB4B0052DFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096A80D62391BB4B0052DFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		096A80D82391BB4B0052DFED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		096A80D82391BB4B0052DFED /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		096A80DB2391BB4B0052DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		096A80DD2391BB4D0052DFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096A80E02391BB4D0052DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +66,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090F881E23FCB69E00D3FDE9 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				096A80D42391BB4B0052DFED /* AppDelegate.swift */,
+				096A80D62391BB4B0052DFED /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		090F881F23FCB6B400D3FDE9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				096A80DA2391BB4B0052DFED /* Main.storyboard */,
+				096A80DF2391BB4D0052DFED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		090F882023FCB6E800D3FDE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				096A80F62391BB670052DFED /* Canvas.swift */,
+				096A80F82391C82E0052DFED /* ColorPicker.swift */,
+				096A80FA2393770C0052DFED /* Drawing.swift */,
+				092E892623F746A3002AAEFB /* Line.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		096A80C82391BB4B0052DFED = {
 			isa = PBXGroup;
 			children = (
@@ -87,17 +116,12 @@
 		096A80D32391BB4B0052DFED /* DrawingApp */ = {
 			isa = PBXGroup;
 			children = (
-				096A80D42391BB4B0052DFED /* AppDelegate.swift */,
-				096A80D62391BB4B0052DFED /* SceneDelegate.swift */,
-				096A80D82391BB4B0052DFED /* ViewController.swift */,
-				096A80DA2391BB4B0052DFED /* Main.storyboard */,
+				090F882023FCB6E800D3FDE9 /* Models */,
+				090F881F23FCB6B400D3FDE9 /* Storyboards */,
+				090F881E23FCB69E00D3FDE9 /* Supporting files */,
+				09A76AC223FCB6540004AC79 /* Controllers */,
 				096A80DD2391BB4D0052DFED /* Assets.xcassets */,
-				096A80DF2391BB4D0052DFED /* LaunchScreen.storyboard */,
 				096A80E22391BB4D0052DFED /* Info.plist */,
-				096A80F62391BB670052DFED /* Canvas.swift */,
-				096A80F82391C82E0052DFED /* ColorPicker.swift */,
-				096A80FA2393770C0052DFED /* Drawing.swift */,
-				092E892623F746A3002AAEFB /* Line.swift */,
 			);
 			path = DrawingApp;
 			sourceTree = "<group>";
@@ -109,6 +133,14 @@
 				096A80ED2391BB4D0052DFED /* Info.plist */,
 			);
 			path = DrawingAppTests;
+			sourceTree = "<group>";
+		};
+		09A76AC223FCB6540004AC79 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				096A80D82391BB4B0052DFED /* CanvasViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096A80D92391BB4B0052DFED /* ViewController.swift in Sources */,
+				096A80D92391BB4B0052DFED /* CanvasViewController.swift in Sources */,
 				096A80D52391BB4B0052DFED /* AppDelegate.swift in Sources */,
 				096A80FB2393770C0052DFED /* Drawing.swift in Sources */,
 				096A80F92391C82E0052DFED /* ColorPicker.swift in Sources */,
@@ -388,7 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oRose.DrawingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,7 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oRose.DrawingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

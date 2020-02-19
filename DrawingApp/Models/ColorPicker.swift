@@ -12,7 +12,6 @@ import UIKit
 internal protocol HSBColorPickerDelegate : NSObjectProtocol {
     func HSBColorColorPickerTouched(sender:HSBColorPicker, color:UIColor, point:CGPoint, state: UIGestureRecognizer.State)
 }
-
 @IBDesignable
 class HSBColorPicker : UIView {
     weak internal var delegate: HSBColorPickerDelegate?
