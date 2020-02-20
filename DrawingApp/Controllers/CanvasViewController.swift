@@ -19,9 +19,9 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var ColorStrokeSelection: UIView!
     @IBOutlet weak var backgroundPickerView: HSBColorPicker!
     private var colorSelection = false
-    private var backgroundFill: UIColor?
     private var slideBackgroundColor = false
     private var slideMenu = false
+    private var backgroundFill: UIColor?
     lazy var canvas = Canvas()
     
     override func viewDidLoad() {
@@ -29,9 +29,11 @@ class CanvasViewController: UIViewController {
         customizeSlideMenuColor()
         setupUI()
     }
+
     
     fileprivate func setupUI() {
-        changeBackgroundView.center.x += 300
+        print(slideBackgroundColor)
+        print(colorSelection)
         strokeWidthSlider.thumbTintColor = .black
         strokeWidthSlider.tintColor = .black
         canvas.backgroundColor = .white
@@ -67,8 +69,8 @@ class CanvasViewController: UIViewController {
     
     
     @IBAction func selectBackgroundColor(_ sender: UIButton) {
-            canvas.backgroundColor = backgroundColorSelection.backgroundColor
-            popBackgroundColorChange()
+        canvas.backgroundColor = backgroundColorSelection.backgroundColor
+        popBackgroundColorChange()
     }
     
     @IBAction func colorSelection(_ sender: UIButton) {
@@ -147,6 +149,11 @@ class CanvasViewController: UIViewController {
     
     
     fileprivate func popMenu() {
+        if colorSelection  {
+            popColorSelection()
+        } else if slideBackgroundColor {
+            popBackgroundColorChange()
+        }
         slideMenu.toggle()
         if slideMenu {
             UIView.animate(withDuration: 0.5) {
@@ -160,6 +167,18 @@ class CanvasViewController: UIViewController {
             }
         }
     }
+    
+    //   working on this
+    //    fileprivate func popView(toggle: inout Bool, customView: UIView, constant: CGFloat, optionalConstant: CGFloat? = 0, duration: Double) {
+    //        toggle.toggle()
+    //        if toggle {
+    //            UIView.animate(withDuration: duration) {
+    //
+    //            }
+    //        } else {
+    //
+    //        }
+    //    }
     
     fileprivate func customizeSlideMenuColor() {
         let colors = [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1),#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1),#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1),#colorLiteral(red: 0, green: 0.7535731196, blue: 0, alpha: 1)]
