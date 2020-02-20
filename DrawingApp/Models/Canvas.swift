@@ -27,6 +27,13 @@ class Canvas: UIView {
         strokeWidth = 0.5
     }
     
+    public func getImageFromCanvas() -> UIImage {
+       let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { context in
+            layer.render(in: context.cgContext )
+        }
+    }
+    
     public func setStrokeWidth(value: CGFloat) {
         strokeWidth = value
     }

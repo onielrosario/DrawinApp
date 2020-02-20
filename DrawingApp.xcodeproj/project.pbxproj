@@ -18,6 +18,8 @@
 		096A80F72391BB670052DFED /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80F62391BB670052DFED /* Canvas.swift */; };
 		096A80F92391C82E0052DFED /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80F82391C82E0052DFED /* ColorPicker.swift */; };
 		096A80FB2393770C0052DFED /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A80FA2393770C0052DFED /* Drawing.swift */; };
+		09EE962323FDCE59009AF8E8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE962223FDCE59009AF8E8 /* Utilities.swift */; };
+		09EE962523FE0E97009AF8E8 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE962423FE0E97009AF8E8 /* Alert+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		096A80F62391BB670052DFED /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		096A80F82391C82E0052DFED /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		096A80FA2393770C0052DFED /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		09EE962223FDCE59009AF8E8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		09EE962423FE0E97009AF8E8 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			children = (
 				096A80D42391BB4B0052DFED /* AppDelegate.swift */,
 				096A80D62391BB4B0052DFED /* SceneDelegate.swift */,
+				09EE962223FDCE59009AF8E8 /* Utilities.swift */,
+				09EE962423FE0E97009AF8E8 /* Alert+Extension.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 				096A80F92391C82E0052DFED /* ColorPicker.swift in Sources */,
 				096A80D72391BB4B0052DFED /* SceneDelegate.swift in Sources */,
 				092E892723F746A3002AAEFB /* Line.swift in Sources */,
+				09EE962323FDCE59009AF8E8 /* Utilities.swift in Sources */,
+				09EE962523FE0E97009AF8E8 /* Alert+Extension.swift in Sources */,
 				096A80F72391BB670052DFED /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
