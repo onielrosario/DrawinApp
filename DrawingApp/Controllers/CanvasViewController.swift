@@ -16,6 +16,9 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var canvasLeadingC: NSLayoutConstraint!
     @IBOutlet weak var changeBackgroundView: UIView!
     @IBOutlet weak var backgroundColorSelection: UIView!
+    @IBOutlet weak var ColorStrokeSelection: UIView!
+    @IBOutlet weak var backgroundPickerView: HSBColorPicker!
+    private var colorSelection = false
     private var backgroundFill: UIColor?
     private var slideBackgroundColor = false
     private var slideMenu = false
@@ -35,6 +38,7 @@ class CanvasViewController: UIViewController {
         canvasView.addSubview(canvas)
         canvas.frame = canvasView.frame
         colorPickerView.delegate = self
+        backgroundPickerView.delegate = self
     }
     
     @IBAction func undo(_ sender: UIButton) {
@@ -47,21 +51,35 @@ class CanvasViewController: UIViewController {
             self.strokeWidthSlider.thumbTintColor = .black
             self.strokeWidthSlider.tintColor = .black
             self.canvas.backgroundColor = .white
+            self.backgroundColorSelection.backgroundColor = .white
             self.strokeWidthSlider.setValue(0.5, animated: true)
         }
     }
     
     @IBAction func changeBackgrounButton(_ sender: UIButton) {
-         popBackgroundColorChange()
+        if colorSelection == false {
+            popBackgroundColorChange()
+        } else {
+            popColorSelection()
+            popBackgroundColorChange()
+        }
     }
     
     
     @IBAction func selectBackgroundColor(_ sender: UIButton) {
-        if slideBackgroundColor {
             canvas.backgroundColor = backgroundColorSelection.backgroundColor
             popBackgroundColorChange()
+    }
+    
+    @IBAction func colorSelection(_ sender: UIButton) {
+        if slideBackgroundColor == false {
+            popColorSelection()
+        } else {
+            popBackgroundColorChange()
+            popColorSelection()
         }
     }
+    
     
     
     @IBAction func setStrokeWidth(_ sender: UISlider) {
@@ -96,18 +114,34 @@ class CanvasViewController: UIViewController {
         if slideMenu {
             popMenu()
         }
+        if colorSelection {
+            popColorSelection()
+        }
+    }
+    
+    fileprivate func popColorSelection() {
+        colorSelection.toggle()
+        if colorSelection {
+            UIView.animate(withDuration: 0.3) {
+                self.ColorStrokeSelection.center.y -= 400
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.ColorStrokeSelection.center.y += 400
+            }
+        }
     }
     
     fileprivate func popBackgroundColorChange() {
         slideBackgroundColor.toggle()
         if slideBackgroundColor {
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.3) {
                 self.changeBackgroundView.center.x -= 350
             }
         } else {
-            UIView.animate(withDuration: 0.5) {
-                           self.changeBackgroundView.center.x += 350
-                       }
+            UIView.animate(withDuration: 0.3) {
+                self.changeBackgroundView.center.x += 350
+            }
         }
     }
     
@@ -138,12 +172,12 @@ class CanvasViewController: UIViewController {
 
 extension CanvasViewController: HSBColorPickerDelegate {
     func HSBColorColorPickerTouched(sender: HSBColorPicker, color: UIColor, point: CGPoint, state: UIGestureRecognizer.State) {
-        if slideBackgroundColor {
+        if sender == backgroundPickerView {
             backgroundFill = color
             backgroundColorSelection.backgroundColor = color
         } else {
-            strokeWidthSlider.thumbTintColor = color
             strokeWidthSlider.tintColor = color
+            strokeWidthSlider.thumbTintColor = color
             canvas.strokeColor = color
         }
     }

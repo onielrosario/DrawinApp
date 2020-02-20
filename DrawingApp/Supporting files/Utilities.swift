@@ -10,7 +10,11 @@ import UIKit
 
 
 
-class Utilities {
+final class Utilities {
+    
+    
+    
+    
 
 }
 
