@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		092E892623F746A3002AAEFB /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		096A80D12391BB4B0052DFED /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		096A80D12391BB4B0052DFED /* Canvas Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Canvas Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A80D42391BB4B0052DFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096A80D62391BB4B0052DFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		096A80D82391BB4B0052DFED /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		096A80D22391BB4B0052DFED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				096A80D12391BB4B0052DFED /* DrawingApp.app */,
+				096A80D12391BB4B0052DFED /* Canvas Room.app */,
 				096A80E72391BB4D0052DFED /* DrawingAppTests.xctest */,
 			);
 			name = Products;
@@ -166,7 +166,7 @@
 			);
 			name = DrawingApp;
 			productName = DrawingApp;
-			productReference = 096A80D12391BB4B0052DFED /* DrawingApp.app */;
+			productReference = 096A80D12391BB4B0052DFED /* Canvas Room.app */;
 			productType = "com.apple.product-type.application";
 		};
 		096A80E62391BB4D0052DFED /* DrawingAppTests */ = {
@@ -426,7 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = oRose.DrawingApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Canvas Room";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -444,7 +444,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = oRose.DrawingApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Canvas Room";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

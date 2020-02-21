@@ -16,7 +16,7 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var canvasLeadingC: NSLayoutConstraint!
     @IBOutlet weak var changeBackgroundView: UIView!
     @IBOutlet weak var backgroundColorSelection: UIView!
-    @IBOutlet weak var ColorStrokeSelection: UIView!
+    @IBOutlet weak var colorStrokeSelection: UIView!
     @IBOutlet weak var backgroundPickerView: HSBColorPicker!
     private var colorSelection = false
     private var slideBackgroundColor = false
@@ -43,6 +43,7 @@ class CanvasViewController: UIViewController {
         backgroundPickerView.delegate = self
     }
     
+    //MARK: -IB ACTIONS
     @IBAction func undo(_ sender: UIButton) {
         canvas.undo()
     }
@@ -67,7 +68,6 @@ class CanvasViewController: UIViewController {
         }
     }
     
-    
     @IBAction func selectBackgroundColor(_ sender: UIButton) {
         canvas.backgroundColor = backgroundColorSelection.backgroundColor
         popBackgroundColorChange()
@@ -81,8 +81,6 @@ class CanvasViewController: UIViewController {
             popColorSelection()
         }
     }
-    
-    
     
     @IBAction func setStrokeWidth(_ sender: UISlider) {
         canvas.setStrokeWidth(value: CGFloat(sender.value))
@@ -100,14 +98,6 @@ class CanvasViewController: UIViewController {
         }
     }
     
-    @objc fileprivate func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            showAlert(title: "Error", message: error.localizedDescription, actionTitle: "OK")
-        } else {
-            showAlert(title: "Saved!", message: nil, actionTitle: "OK")
-        }
-    }
-    
     @IBAction func close(_ sender: UIButton) {
         popMenu()
     }
@@ -120,16 +110,24 @@ class CanvasViewController: UIViewController {
             popColorSelection()
         }
     }
+    // MARK:- Private methods
+    @objc fileprivate func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            showAlert(title: "Error", message: error.localizedDescription, actionTitle: "OK")
+        } else {
+            showAlert(title: "Saved!", message: nil, actionTitle: "OK")
+        }
+    }
     
     fileprivate func popColorSelection() {
         colorSelection.toggle()
         if colorSelection {
             UIView.animate(withDuration: 0.3) {
-                self.ColorStrokeSelection.center.y -= 400
+                self.colorStrokeSelection.center.y -= 400
             }
         } else {
             UIView.animate(withDuration: 0.3) {
-                self.ColorStrokeSelection.center.y += 400
+                self.colorStrokeSelection.center.y += 400
             }
         }
     }
@@ -146,7 +144,6 @@ class CanvasViewController: UIViewController {
             }
         }
     }
-    
     
     fileprivate func popMenu() {
         if colorSelection  {
@@ -188,7 +185,7 @@ class CanvasViewController: UIViewController {
 }
 
 
-
+//MARK: - Extension
 extension CanvasViewController: HSBColorPickerDelegate {
     func HSBColorColorPickerTouched(sender: HSBColorPicker, color: UIColor, point: CGPoint, state: UIGestureRecognizer.State) {
         if sender == backgroundPickerView {

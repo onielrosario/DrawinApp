@@ -190,6 +190,18 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOffset">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M1-to-Bzg">
@@ -256,7 +268,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="ColorStrokeSelection" destination="dob-R8-ESV" id="Cc8-vo-Ewb"/>
                         <outlet property="backgroundColorSelection" destination="trw-zV-f5U" id="1VG-Qj-Qb9"/>
                         <outlet property="backgroundPickerView" destination="flc-cF-Jec" id="URs-1N-nrp"/>
                         <outlet property="canvasLeadingC" destination="a9O-O5-deM" id="XSX-yL-SEJ"/>
@@ -264,6 +275,7 @@
                         <outlet property="canvasView" destination="jW6-kT-dzb" id="n6K-o1-SkF"/>
                         <outlet property="changeBackgroundView" destination="0Oq-Yy-QtB" id="Moh-3L-Nmh"/>
                         <outlet property="colorPickerView" destination="eBe-NC-BgG" id="olk-KP-Zau"/>
+                        <outlet property="colorStrokeSelection" destination="dob-R8-ESV" id="Cc8-vo-Ewb"/>
                         <outlet property="strokeWidthSlider" destination="dnZ-zJ-qZW" id="fCJ-nF-x9U"/>
                     </connections>
                 </viewController>
